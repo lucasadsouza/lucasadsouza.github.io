@@ -1,22 +1,29 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Stream Lyrics</title>
-    <Link rel="shortcut icon" href="stream-lyrics-logo.png" size="32x32" type="image/png">
     
+    <link rel="stylesheet" href="../style/normalize.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers|Montserrat:wght@900&amp;display=swap" rel="stylesheet">
+
+    <title>Stream Lyrics | PLAY</title>
+    <link rel="shortcut icon" href="../img/stream-lyrics-logo.png" type="image/x-icon">
+
     <script rel="text/javascript" src="script.js"></script>
 
-    <meta property="og:title" content="Stream Lyrics | Play">
-    <meta property="og:description" content="Acompanhe a letra e escute as músicas com Stream Lyrics.">
-    <meta property="og:image" itemprop="image" content="#">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="song">
+    <meta property="og:title" content="Stream Lyrics | PLAY">
+    <meta property="og:description" content="Songs in Japanese">
+    <meta property="og:image" content="https://varlasouza.github.io/en/app/stream-lyrics/img/banner01.jpg">
+    <meta property="og:url" content="https://varlasouza.github.io/en/app/stream-lyrics/play">
+    <meta property="og:site_name" content="Stream Lyrics">
 
-    <meta name="description" content="Acompanhe a letra e escute as músicas com Stream Lyrics.">
+    <meta name="description" content="Songs in Japanese">
     <meta name="keywords" content="musicas, letrasdemúsicas, cantar">
 
     <meta name="theme-color" content="#151c24">
@@ -24,6 +31,32 @@
     <meta name="msapplication-navbutton-color" content="#151c24">
 </head>
 <body>
+    <nav class="navbar">
+        <div>
+            <a href="https://varlasouza.github.io/en/app/stream-lyrics" class="logo"><img src="../img/stream-lyrics-logo.png"></a>
+        </div>
+
+        <div class="navbar-container">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">POP</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">MPB</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">J-POP</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ORCHESTRA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">ANIME</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <section id="player-lyrics">
         <div id="player"></div>
 
@@ -41,8 +74,20 @@
         <p id="about-autor"></p>
     </section>
 
-    <p id="tumb-seemore">Veja mais:</p>
-    <section id="tumb-carroussel"></section>
+    <div class="carousel-musics">
+        <h2 class="music-items-title">Listen more:</h2>
+        <div class="music-container">
+            <button class="button button-control tablet-button" onclick="scrollMusic(0, 'left')">
+                <i class="fas fa-chevron-left hide0"></i>
+            </button>
+
+            <div class="music-items"></div>
+
+            <button class="button button-control tablet-button" onclick="scrollMusic(0, 'right')">
+                <i class="fas fa-chevron-right hide0"></i>
+            </button>
+        </div>
+    </div>
 
     <div id="cookies-box">
         <p id="cookies-msg">Este site usa cookies para garantir que você obtenha a melhor experiência.</p>
@@ -51,16 +96,38 @@
 
     <footer>
         <div>
-            <h5 class="footer-text">Desenvolvido por var L. A. Souza | V1.0</h5>
-            <h6 class="footer-text">Outubro 2020 - Stream Lyrics</br>Todos os direitos reservados</h6>
+            <h5 class="footer-text">Desenvolvido por var L. A. Souza | V6.0</h5>
+            <h6 class="footer-text">Janeiro 2021 - Stream Lyrics</br>Todos os direitos reservados</h6>
         </div>
         <div>
-            <ul>
-                <li>•> <a href="https://varlasouza.github.io/pt">var L. A. Souza | ÍNICIO</a></br></li>
-                <li>•> <a href="https://varlasouza.github.io/en">var L. A. Souza | HOME</a></br></li>
-                <li>•> <a href="https://varlasouza.github.io/stream-lyrics/index.html">Stream Lyrics | PLAY</a></li>
-            </ul>
+            <details>
+                <summary>Stream Lyrics</summary>
+
+                <ul>
+                    <li>•> <a href="https://varlasouza.github.io/en/app/stream-lyrics">Stream Lyrics | HOME</a></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Images by Pexels</summary>
+
+                <ul>
+                    <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@earano?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Emiliano Arano</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+
+                    <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@maris-rhamdani-714975?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Maris Rhamdani</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+
+                    <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@snapwire?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Snapwire</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+
+                    <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@eberhardgross?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">eberhard grossgasteiger</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+
+                    <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@chriskane?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Chris Kane</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+                </ul>
+            </details>
         </div>
     </footer>
+
+    <script src="https://kit.fontawesome.com/2a81453bb5.js" crossorigin="anonymous"></script>
+
+    <script src="../js/index.js"></script>
 </body>
 </html>

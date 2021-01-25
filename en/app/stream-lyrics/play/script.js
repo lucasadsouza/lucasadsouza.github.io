@@ -153,59 +153,6 @@ function getMusicsData () {
     });
 }
 
-
-function showVideoMenu(musicData) {
-    let lyricsID = ['apesardequerer', 'aprilshower', 'phoenix', 'tanjironouta', 'takeover'];
-    let lyric;
-    let elementosDiv = [];
-    let elementosDivNew = "";
-    let currentMusic = getUrlParams()[0] || 'phoenix';
-
-    let musicIndex = lyricsID.indexOf(currentMusic);
-    while (musicIndex >= 0) {
-        lyricsID.splice(musicIndex, 1);
-        musicIndex = lyricsID.indexOf(currentMusic);
-    };
-
-    while (lyricsID.length > 8) {
-        lyricsID.pop();
-    };
-
-    for (let index = 0; index < lyricsID.length; index++) {
-        lyric = musicData[lyricsID[index]];
-
-        elementosDiv.push(`<a onclick="changeMusic('${lyricsID[index]}')">
-            <div class="tumb">
-                <img src="https://img.youtube.com/vi/${lyric.videoID}/0.jpg" class="tumb-img">
-                <p class="tumb-title">${lyric.title}</p>
-                <p class="tumb-artist">${lyric.artist}</p>
-            </div>
-        </a>`);
-    };
-
-    for (let index = 0; index < elementosDiv.length; index++) {
-        elementosDivNew = elementosDivNew + elementosDiv[index];
-    };
-
-    document.getElementById("tumb-carroussel").innerHTML = elementosDivNew;
-
-    if (mobileDetector()) {
-        document.getElementById("tumb-carroussel").style.margin = "0 auto 20px auto";
-        document.getElementById("tumb-carroussel").style.flexWrap = "nowrap";
-        document.getElementById("tumb-carroussel").style.alignItems = "flex-start";
-        document.getElementById("tumb-carroussel").style.justifyContent = "flex-start";
-        document.getElementById("tumb-carroussel").style.overflowX = "scroll";
-
-        for (let index = 0; index < lyricsID.length; index++) {
-            document.getElementsByClassName("tumb-img")[index].style.width = "152px";
-            document.getElementsByClassName("tumb-img")[index].style.height = "86px";
-            document.getElementsByClassName("tumb-title")[index].style.fontSize = "8pt";
-            document.getElementsByClassName("tumb-artist")[index].style.fontSize = "6pt";
-        }
-    }
-}
-
-
 function getVideoCurrentTime () {
     let videoCurrentTime = 0;
     if (player && player.getCurrentTime) {
@@ -264,7 +211,6 @@ function controlLyricsDisplay () {
     }
     let data = jsonHandler('get', 'current-data');
     showLyricInfo(lyric);
-    showVideoMenu(data);
 }
 
 
@@ -291,24 +237,6 @@ function removeCookiesMsg () {
         cookiesMessage.parentNode.removeChild(cookiesMessage);
     };
 }
-
-
-function mobileDetector () { 
-    if( navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)
-    ){
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
 
 var videoDuration = 0;
 var videoCurrentTime = 0;
