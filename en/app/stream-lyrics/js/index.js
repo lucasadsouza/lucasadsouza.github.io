@@ -18,7 +18,7 @@ function jsonHandler(action, cookieName, item=false) {
 }
 
 function getMusicsData () {
-    fetch(`../data.json`).then((response) => {
+    fetch(`https://varlasouza.github.io/en/app/stream-lyrics/data.json`).then((response) => {
         if (response.ok) {
             return response.json();
         }
