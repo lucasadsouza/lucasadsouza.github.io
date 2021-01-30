@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="../style/normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/responsive.css">
+
+    <link rel="stylesheet" href="../Elements/Navbar/navbar.css">
+    <link rel="stylesheet" href="../Elements/Carousel/carousel.css">
+    <link rel="stylesheet" href="../Elements/Footer/footer.css">
 
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers|Montserrat:wght@900&amp;display=swap" rel="stylesheet">
 
     <title>Stream Lyrics | PLAY</title>
     <link rel="shortcut icon" href="../img/stream-lyrics-logo.png" type="image/x-icon">
-
-    <script rel="text/javascript" src="script.js"></script>
 
     <meta property="og:type" content="song">
     <meta property="og:title" content="Stream Lyrics | PLAY">
@@ -31,27 +32,27 @@
     <meta name="msapplication-navbutton-color" content="#151c24">
 </head>
 <body>
-    <nav class="navbar">
-        <div>
-            <a href="https://varlasouza.github.io/en/app/stream-lyrics" class="logo"><img src="../img/stream-lyrics-logo.png"></a>
+    <nav class="navbar" theme-color="black">
+        <div class="logo">
+            <a href="#" class="link"><img class="logo-img" src="../img/stream-lyrics-logo.png"></a>
         </div>
 
-        <div class="navbar-container">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">POP</a>
+        <div class="container">
+            <ul class="nav-tags">
+                <li class="item">
+                    <a href="#" class="link">POP</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">MPB</a>
+                <li class="item">
+                    <a href="#" class="link">MPB</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">J-POP</a>
+                <li class="item">
+                    <a href="#" class="link">J-POP</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">ORCHESTRA</a>
+                <li class="item">
+                    <a href="#" class="link">ORCHESTRA</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">ANIME</a>
+                <li class="item">
+                    <a href="#" class="link">ANIME</a>
                 </li>
             </ul>
         </div>
@@ -74,17 +75,29 @@
         <p id="about-autor"></p>
     </section>
 
-    <div class="carousel-musics">
-        <h2 class="music-items-title">Listen more:</h2>
-        <div class="music-container">
-            <button class="button button-control tablet-button" onclick="scrollMusic(0, 'left')">
-                <i class="fas fa-chevron-left hide0"></i>
+    <div class="carousel" theme-color="light">
+        <h2 class="title">Listen more:</h2>
+
+        <div class="container">
+            <button class="bt-control" onclick="scrollMusic(0, 'left')">
+                <i class="fas fa-chevron-left"></i>
             </button>
 
-            <div class="music-items"></div>
+            <div class="carousel-items">
+                <div class="carousel-item">
+                    <a class="link" href="@link">
+                        <img class="item-img" orientation="landscape" src="img/default.png" alt="">
 
-            <button class="button button-control tablet-button" onclick="scrollMusic(0, 'right')">
-                <i class="fas fa-chevron-right hide0"></i>
+                        <div class="item-details">
+                            <h3 class="item-title">@title</h3>
+                            <p class="subtitle">@subtitle</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <button class="bt-control" onclick="scrollMusic(0, 'right')">
+                <i class="fas fa-chevron-right"></i>
             </button>
         </div>
     </div>
@@ -94,9 +107,9 @@
         <button id="cookies-btn" onclick="acceptCookies()">Aceitar!</button>
     </div>
 
-    <footer>
+    <footer theme-color="black">
         <div>
-            <h5 class="footer-text">Desenvolvido por var L. A. Souza | V6.0</h5>
+            <h5 class="footer-text">Desenvolvido por var L. A. Souza | V6.1</h5>
             <h6 class="footer-text">Janeiro 2021 - Stream Lyrics</br>Todos os direitos reservados</h6>
         </div>
         <div>
@@ -128,6 +141,28 @@
 
     <script src="https://kit.fontawesome.com/2a81453bb5.js" crossorigin="anonymous"></script>
 
-    <script src="../js/index.js"></script>
+    <script type="module">
+        import { getMusicData, jsonHandler } from '../js/data_handler.js';
+        import { carousel, scrollCarousel } from '../Elements/Carousel/carousel.js';
+        import { popular } from '../js/process_music.js';
+
+        getMusicData();
+        var data = jsonHandler('get', 'current-data').data;
+
+        window.scrollMusic = (element, direction) => {
+            scrollCarousel(element, direction);
+        }
+
+        let showMenu = true;
+        if (showMenu === true) {
+            const popularList = popular(data);
+
+            carousel(popularList, 0, 'https://varlasouza.github.io/en/app/stream-lyrics/play?lrc=');
+
+            showMenu = false;
+        }
+    </script>
+
+    <script rel="text/javascript" src="script.js"></script>
 </body>
 </html>

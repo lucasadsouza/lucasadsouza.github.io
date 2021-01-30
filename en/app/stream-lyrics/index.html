@@ -6,7 +6,11 @@
 
         <link rel="stylesheet" href="style/normalize.css">
         <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/responsive.css">
+
+        <link rel="stylesheet" href="Elements/Navbar/navbar.css">
+        <link rel="stylesheet" href="Elements/Banner/banner.css">
+        <link rel="stylesheet" href="Elements/Carousel/carousel.css">
+        <link rel="stylesheet" href="Elements/Footer/footer.css">
 
         <link href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers|Montserrat:wght@900&amp;display=swap" rel="stylesheet">
 
@@ -28,47 +32,49 @@
     </head>
 
     <body>
-        <nav class="navbar">
-            <div>
-                <a href="#" class="logo"><img src="img/stream-lyrics-logo.png"></a>
+        <nav class="navbar" theme-color="black">
+            <div class="logo">
+                <a href="#" class="link"><img class="logo-img" src="img/stream-lyrics-logo.png"></a>
             </div>
 
-            <div class="navbar-container">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">POP</a>
+            <div class="container">
+                <ul class="nav-tags">
+                    <li class="item">
+                        <a href="#" class="link">POP</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">MPB</a>
+                    <li class="item">
+                        <a href="#" class="link">MPB</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">J-POP</a>
+                    <li class="item">
+                        <a href="#" class="link">J-POP</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">ORCHESTRA</a>
+                    <li class="item">
+                        <a href="#" class="link">ORCHESTRA</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">ANIME</a>
+                    <li class="item">
+                        <a href="#" class="link">ANIME</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <main>
-            <div class="banner-carousel">
+            <div class="banner" theme-color="black">
                 <button class="button button-control" onclick="changeBanner('minus')">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-
+            
                 <div class="banner-container">
                     <div class="banner-about">
                         <div class="banner-title"><h2>April Showers</h2></div>
                         <div class="banner-singer"><p>Aimer</p></div>
                     </div>
-
+            
                     <div class="banner-extras">
-                        <button class="button banner-button" onclick="listenNow()"><a class="banner-button-link" href="#">LISTEN NOW <i class="fas fa-play-circle rotate"></i></a></button>
-
+                        <a class="banner-button-link" href="#">
+                            <button class="button banner-button" onclick="listenButton()">LISTEN NOW <i class="fas fa-play-circle rotate"></i></button>
+                        </a>
+            
                         <ul class="music-tags">
                             <li class="tag-item">J-POP</li>
                             <li class="tag-item">MELANCHOLIC</li>
@@ -77,63 +83,97 @@
                         </ul>
                     </div>
                 </div>
-
+            
                 <button class="button button-control" onclick="changeBanner()">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
 
-            <div class="carousel-musics">
-                <h2 class="music-items-title">Most played:</h2>
-                <div class="music-container">
-                    <button class="button button-control tablet-button" onclick="scrollMusic(0, 'left')">
-                        <i class="fas fa-chevron-left hide0"></i>
+            <div class="carousel" theme-color="black">
+                <h2 class="title">Most played:</h2>
+
+                <div class="container">
+                    <button class="bt-control" onclick="scrollMusic(0, 'left')">
+                        <i class="fas fa-chevron-left"></i>
                     </button>
 
-                    <div class="music-items"></div>
+                    <div class="carousel-items">
+                        <div class="carousel-item">
+                            <a class="link" href="@link">
+                                <img class="item-img" orientation="landscape" src="img/default.png" alt="">
 
-                    <button class="button button-control tablet-button" onclick="scrollMusic(0, 'right')">
-                        <i class="fas fa-chevron-right hide0"></i>
-                    </button>
-                </div>
-            </div>
+                                <div class="item-details">
+                                    <h3 class="item-title">@title</h3>
+                                    <p class="subtitle">@subtitle</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-            <div class="carousel-musics">
-                <h2 class="music-items-title">Best of Pop:</h2>
-
-                <div class="music-container">
-                    <button class="button button-control tablet-button" onclick="scrollMusic(1, 'left')">
-                        <i class="fas fa-chevron-left hide1"></i>
-                    </button>
-
-                    <div class="music-items"></div>
-
-                    <button class="button button-control tablet-button" onclick="scrollMusic(1, 'right')">
-                        <i class="fas fa-chevron-right hide1"></i>
+                    <button class="bt-control" onclick="scrollMusic(0, 'right')">
+                        <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
 
-            <div class="carousel-musics">
-                <h2 class="music-items-title">Made in Japan:</h2>
+            <div class="carousel" theme-color="black">
+                <h2 class="title">Best of Pop:</h2>
 
-                <div class="music-container">
-                    <button class="button button-control tablet-button" onclick="scrollMusic(1, 'left')">
-                        <i class="fas fa-chevron-left hide2"></i>
+                <div class="container">
+                    <button class="bt-control" onclick="scrollMusic(1, 'left')">
+                        <i class="fas fa-chevron-left"></i>
                     </button>
 
-                    <div class="music-items"></div>
+                    <div class="carousel-items">
+                        <div class="carousel-item">
+                            <a class="link" href="@link">
+                                <img class="item-img" orientation="landscape" src="img/default.png" alt="">
 
-                    <button class="button button-control tablet-button" onclick="scrollMusic(1, 'right')">
-                        <i class="fas fa-chevron-right hide2"></i>
+                                <div class="item-details">
+                                    <h3 class="item-title">@title</h3>
+                                    <p class="subtitle">@subtitle</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="bt-control" onclick="scrollMusic(1, 'right')">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="carousel" theme-color="black">
+                <h2 class="title">Made in Japan:</h2>
+
+                <div class="container">
+                    <button class="bt-control" onclick="scrollMusic(2, 'left')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel-items">
+                        <div class="carousel-item">
+                            <a class="link" href="@link">
+                                <img class="item-img" orientation="landscape" src="img/default.png" alt="">
+
+                                <div class="item-details">
+                                    <h3 class="item-title">@title</h3>
+                                    <p class="subtitle">@subtitle</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="bt-control" onclick="scrollMusic(2, 'right')">
+                        <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
         </main>
 
-        <footer>
+        <footer theme-color="black">
             <div>
-                <h5 class="footer-text">Desenvolvido por var L. A. Souza | V6.0</h5>
+                <h5 class="footer-text">Desenvolvido por var L. A. Souza | V6.1</h5>
                 <h6 class="footer-text">Janeiro 2021 - Stream Lyrics</br>Todos os direitos reservados</h6>
             </div>
             <div>
@@ -155,7 +195,6 @@
         </footer>
 
         <script src="https://kit.fontawesome.com/2a81453bb5.js" crossorigin="anonymous"></script>
-
-        <script src="js/index.js"></script>
+        <script src="js/index.js" type="module" crossorigin="anonymous"></script>
     </body>
 </html>

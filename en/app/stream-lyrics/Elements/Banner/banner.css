@@ -1,0 +1,275 @@
+/*Banner Carousel*/
+
+.banner {
+    --banner-primary-text-color: #f5f9fc;
+    --banner-secundary-text-color:  #4682b4;
+    --banner-button-color: #4682b4;
+    --banner-button-hover: #151c24;
+    --banner-main-button-color: #4682b4;
+    --banner-main-button-hover: #f5f9fc;
+    --banner-main-button-text-color: #f5f9fc;
+    --banner-main-button-text-hover: #4682b4;
+    --banner-tag-hover: #4682b4;
+    --banner-black-filter: rgba(0, 0, 0, 0.7);
+
+    --banner-modern-family: "Comfortaa", Verdana, sans-serif;
+
+
+    height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+
+    background-image: url("../../img/banner01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-color: var(--banner-black-filter);
+    font-family: var(--banner-modern-family);
+}
+
+.banner[theme-color = yellow] {
+    --banner-primary-text-color: #f5f9fc;
+    --banner-secundary-text-color:  #fe9e27;
+    --banner-button-color: #fe9e27;
+    --banner-button-hover: #b9731d;
+    --banner-main-button-color: #fe9e27;
+    --banner-main-button-hover: #f5f9fc;
+    --banner-main-button-text-color: #f5f9fc;
+    --banner-main-button-text-hover: #fe9e27;
+    --banner-tag-hover: #fe9e27;
+}
+
+.banner[theme-color = black] {
+    --banner-primary-text-color: #f5f9fc;
+    --banner-secundary-text-color:  #4682b4;
+    --banner-button-color: #f5f9fc;
+    --banner-button-hover: #4682b4;
+    --banner-main-button-color: #4682b4;
+    --banner-main-button-hover: #f5f9fc;
+    --banner-main-button-text-color: #f5f9fc;
+    --banner-main-button-text-hover: #4682b4;
+    --banner-tag-hover: #4682b4;
+}
+
+.banner[theme-color = black-yellow] {
+    --banner-primary-text-color: #f5f9fc;
+    --banner-secundary-text-color:  #fe9e27;
+    --banner-button-color: #f5f9fc;
+    --banner-button-hover: #fe9e27;
+    --banner-main-button-color: #fe9e27;
+    --banner-main-button-hover: #f5f9fc;
+    --banner-main-button-text-color: #f5f9fc;
+    --banner-main-button-text-hover: #fe9e27;
+    --banner-tag-hover: #fe9e27;
+}
+
+.button {
+    min-width: 33px;
+    border: none;
+    padding: 0;
+
+    cursor: pointer;
+    outline: inherit;
+
+    background: none;
+}
+
+.button-control {
+    color: var(--banner-button-color);
+    font-size: 40pt;
+}
+
+.button-control:hover {
+    color: var(--banner-button-hover);
+}
+
+.banner .banner-container {
+    width: 90%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner .banner-about {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.banner .banner-about .banner-title, .banner-about .banner-singer {
+    height: 90px;
+}
+
+.banner .banner-about .banner-title h2 {
+    font-size: 50pt;
+    font-weight: 900;
+
+    color: var(--banner-primary-text-color);
+}
+
+.banner .banner-about .banner-singer p {
+    font-size: 30pt;
+
+    color: var(--banner-secundary-text-color);
+}
+
+.banner .banner-extras {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 1vh;
+}
+
+.banner .music-tags {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+}
+
+.banner .music-tags .tag-item {
+    margin-left: 10px;
+    color: var(--banner-main-button-text-color);
+
+    transition: all 0.2s ease;
+
+    cursor: pointer;
+}
+
+.banner .music-tags .tag-item:hover {
+    color: var(--banner-tag-hover);
+}
+
+.banner .banner-button-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.banner .banner-button {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px 50px 50px 5px;
+    font-size: 24pt;
+
+    background-color: var(--banner-main-button-color);
+    color: var(--banner-main-button-text-color);
+
+    transition: all 0.2s ease;
+}
+
+.banner .banner-button:hover {
+    background-color: var(--banner-main-button-hover);
+}
+
+.banner .banner-button:hover {
+    color: var(--banner-main-button-color);
+}
+
+.banner .banner-button i {
+    font-size: 31pt;
+    margin-left: 10px;
+}
+
+/*Animations*/
+.rotate {
+    animation-name: rotateAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+}
+
+@keyframes rotateAnimation {
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 767px) {
+    .banner {
+        height: 80vh;
+    
+        padding: 0 10px;
+    }
+
+    .button-control {
+        display: none;
+    }
+    
+    .banner .banner-container {
+        width: 100%;
+    }
+    
+    .banner .banner-about {
+        margin-top: 2vh;
+    }
+
+    .banner .banner-about .banner-title, .banner-about .banner-singer {
+        height: 55px;
+    }
+    
+    .banner .banner-about .banner-title h2 {
+        font-size: 30pt;
+    }
+    
+    .banner .banner-about .banner-singer p {
+        font-size: 20pt;
+    }
+
+    .banner .banner-extras {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .banner .music-tags {
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .banner .music-tags .tag-item {
+        margin: 10px 0 0 0;
+    }
+    
+    .banner .banner-button {
+        padding: 10px;
+        border-radius: 5px 50px 50px 5px;
+    
+        font-size: 18pt;
+    }
+}
+
+@media (max-width: 414px) {
+    .banner .banner-container {
+        width: 100%;
+    }
+
+    .banner .banner-about .banner-title, .banner-about .banner-singer {
+        height: 95px;
+    }
+}
