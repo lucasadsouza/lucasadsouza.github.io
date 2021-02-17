@@ -1,37 +1,30 @@
         import { getMusicData, jsonHandler } from './data_handler.js';
-        import { banner, listenNow } from '../Elements/Banner/banner.js';
-        import { carousel, scrollCarousel } from '../Elements/Carousel/carousel.js';
-        import { popular, filterTag } from './process_music.js';
+        import { banner, listenNow } from '../Components/Banner/banner.js';
+        import { Carousel } from '../Components/Carousel/carousel.js';
+
+
+        const url = 'https://varlasouza.github.io/en/app/stream-lyrics/play?lrc=';
+        let bannerCounter = 0;
 
         getMusicData();
-        var data = jsonHandler('get', 'current-data').data;
+        const data = jsonHandler('get', 'current-data').data;
 
-        let bannerCounter = 0;
-        window.changeBanner = (change) => {
-            bannerCounter = banner(bannerCounter, data, change);
-        }
+        let mostPopCarousel = new Carousel(data, 0, url);
+        let popCarousel = new Carousel(data, 1, url);
+        let japaneseCarousel = new Carousel(data, 2, url);
 
-        window.listenButton = () => {
-            listenNow(data);
-        }
+        mostPopCarousel.create();
+        popCarousel.create('Pop');
+        japaneseCarousel.create('Japanese');
+
+        window.changeBanner = (change) => bannerCounter = banner(bannerCounter, data, change);
+
+        window.listenButton = () => listenNow(data);
 
         window.scrollMusic = (element, direction) => {
-            scrollCarousel(element, direction);
+            mostPopCarousel.scroll(element, direction);
+            popCarousel.scroll(element, direction);
+            japaneseCarousel.scroll(element, direction);
         }
 
-        let showMenu = true;
-        if (showMenu === true) {
-            const popularList = popular(data);
-            const popList = filterTag(data, 'Pop');
-            const japaneseList = filterTag(data, 'Japanese');
-
-            carousel(popularList, 0, 'https://varlasouza.github.io/en/app/stream-lyrics/play?lrc=');
-            carousel(popList, 1, 'https://varlasouza.github.io/en/app/stream-lyrics/play?lrc=');
-            carousel(japaneseList, 2, 'https://varlasouza.github.io/en/app/stream-lyrics/play?lrc=');
-
-            showMenu = false;
-        }
-
-        setInterval(() => {
-            bannerCounter = banner(bannerCounter, data);
-        }, 10000);
+        setInterval(() => bannerCounter = banner(bannerCounter, data), 10000);

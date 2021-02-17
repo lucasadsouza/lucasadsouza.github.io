@@ -1,4 +1,3 @@
-let bannerCounter = 0;
 export function banner (bannerCounter, data, change="plus") {
     let banner = document.getElementsByClassName("banner")[0];
     let title = document.getElementsByClassName("banner-title")[0];

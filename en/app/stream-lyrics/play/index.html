@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../style/style.css">
 
-    <link rel="stylesheet" href="../Elements/Navbar/navbar.css">
-    <link rel="stylesheet" href="../Elements/Carousel/carousel.css">
-    <link rel="stylesheet" href="../Elements/Footer/footer.css">
+    <link rel="stylesheet" href="../Components/Navbar/navbar.css">
+    <link rel="stylesheet" href="../Components/Carousel/carousel.css">
+    <link rel="stylesheet" href="../Components/Footer/footer.css">
 
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers|Montserrat:wght@900&amp;display=swap" rel="stylesheet">
 
@@ -143,24 +143,17 @@
 
     <script type="module">
         import { getMusicData, jsonHandler } from '../js/data_handler.js';
-        import { carousel, scrollCarousel } from '../Elements/Carousel/carousel.js';
-        import { popular } from '../js/process_music.js';
+        import { Carousel } from '../Components/Carousel/carousel.js';
 
         getMusicData();
         var data = jsonHandler('get', 'current-data').data;
 
-        window.scrollMusic = (element, direction) => {
-            scrollCarousel(element, direction);
-        }
+        const url = 'https://varlasouza.github.io/en/app/stream-lyrics/play?lrc=';
 
-        let showMenu = true;
-        if (showMenu === true) {
-            const popularList = popular(data);
+        let mostPopCarousel = new Carousel(data, 0, url);
+        mostPopCarousel.create();
 
-            carousel(popularList, 0, 'https://varlasouza.github.io/en/app/stream-lyrics/play?lrc=');
-
-            showMenu = false;
-        }
+        window.scrollMusic = (element, direction) => mostPopCarousel.scroll(element, direction);
     </script>
 
     <script rel="text/javascript" src="script.js"></script>

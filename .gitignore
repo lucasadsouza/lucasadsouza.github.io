@@ -1,13 +1,24 @@
 en/app/stream-lyrics/img/0.jpg
 
+
 en/app/stream-lyrics/play/page.html
+
 en/app/stream-lyrics/play/saw.js
+
 en/app/stream-lyrics/play/main.js
 
+
 en/app/stream-lyrics/seila.html
+
 en/app/stream-lyrics/mainscript.js
 
-en/app/stream-lyrics/Elements/Banner/banner.html
-en/app/stream-lyrics/Elements/Carousel/carousel.html
-en/app/stream-lyrics/Elements/Footer/footer.html
-en/app/stream-lyrics/Elements/Navbar/navbar.html
+
+en/app/stream-lyrics/Components/Banner/banner.html
+
+en/app/stream-lyrics/Components/Carousel/carousel.html
+
+en/app/stream-lyrics/Components/Footer/footer.html
+
+en/app/stream-lyrics/Components/Navbar/navbar.html
+en/app/stream-lyrics/.vscode
+lixo
