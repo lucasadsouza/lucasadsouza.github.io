@@ -1,8 +1,9 @@
 export class Carousel {
-    constructor (data, index, URL) {
+    constructor (data, index, URL, current_query='none') {
         this.data = data;
         this.index = index;
         this.URL = URL;
+        this.current_query = current_query;
     }
 
     _show = false;
@@ -39,18 +40,26 @@ export class Carousel {
             if (img.getAttribute('orientation') === 'portrait' && current.singer.length >= 19) {
                 current.singer = `${current.singer.slice(0, 19).trim()}...`;
 
-            } else if (current.singer.length >= 31) {
-                current.singer = `${current.singer.slice(0, 31).trim()}...`;
+            } else if (current.singer.length >= 29) {
+                current.singer = `${current.singer.slice(0, 29).trim()}...`;
             }
 
             return current;
         });
 
         itemData.map((current) => {
+            if (current.query === this.current_query) {
+                return 'none';
+            }
+
             itemString += items.innerHTML;
 
-            itemString = itemString.replace('@link', `${this.URL}${current.id}&type=alphabet&id=${current.video_id}`);
-            itemString = itemString.replace('img/default.png', current.banner);
+            itemString = itemString.replace('@link', `${this.URL}?id=${current.query}`);
+            if (current.low_banner !== 'none') { 
+                itemString = itemString.replace('img/default.png', current.low_banner);
+            } else {
+                itemString = itemString.replace('img/default.png', 'img/low-size/default.png');
+            }
             itemString = itemString.replace('@title', current.title);
             itemString = itemString.replace('@subtitle', current.singer);
         });

@@ -5,17 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="style/normalize.css">
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/home.css">
 
         <link rel="stylesheet" href="Components/Navbar/navbar.css">
         <link rel="stylesheet" href="Components/Banner/banner.css">
         <link rel="stylesheet" href="Components/Carousel/carousel.css">
         <link rel="stylesheet" href="Components/Footer/footer.css">
+        <link rel="stylesheet" href="Components/Cookies/cookies.css">
 
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers|Montserrat:wght@900&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers|Montserrat:wght@900&amp;display=swap">
 
         <title>Stream Lyrics | HOME</title>
-        <link rel="shortcut icon" href="img/stream-lyrics-logo.png" type="image/x-icon">
+        <link rel="shortcut icon" href="img/low-size/sl-logo.png" type="image/x-icon">
 
         <meta property="og:type" content="song">
         <meta property="og:title" content="Stream Lyrics | HOME">
@@ -23,9 +24,9 @@
         <meta property="og:image" content="https://varlasouza.github.io/en/app/stream-lyrics/img/banner01.jpg">
         <meta property="og:url" content="https://varlasouza.github.io/en/app/stream-lyrics">
         <meta property="og:site_name" content="Stream Lyrics">
-
         <meta name="description" content="Songs in Japanese">
-        <meta name="keywords" content="musicas, letrasdemúsicas, cantar">
+        <meta name="keywords" content="musics, musiclyrics, sing">
+
         <meta name="theme-color" content="#151c24">
         <meta name="apple-mobile-web-app-status-bar-style" content="#151c24">
         <meta name="msapplication-navbutton-color" content="#151c24">
@@ -34,7 +35,14 @@
     <body>
         <nav class="navbar" theme-color="black">
             <div class="logo">
-                <a href="#" class="link"><img class="logo-img" src="img/stream-lyrics-logo.png"></a>
+                <a href="#" class="link"><img class="logo-img" src="img/low-size/sl-logo.png"></a>
+
+                <div class="searchbox">
+                    <input type="text" class="search-text" placeholder="Search here">
+                    <a href="#" class="search-btn">
+                        <img src="https://img.icons8.com/fluent-systems-filled/24/000000/search.png">
+                    </a>
+                </div>
             </div>
 
             <div class="container">
@@ -63,18 +71,18 @@
                 <button class="button button-control" onclick="changeBanner('minus')">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-            
+
                 <div class="banner-container">
                     <div class="banner-about">
                         <div class="banner-title"><h2>April Showers</h2></div>
                         <div class="banner-singer"><p>Aimer</p></div>
                     </div>
-            
+
                     <div class="banner-extras">
                         <a class="banner-button-link" href="#">
                             <button class="button banner-button" onclick="listenButton()">LISTEN NOW <i class="fas fa-play-circle rotate"></i></button>
                         </a>
-            
+
                         <ul class="music-tags">
                             <li class="tag-item">J-POP</li>
                             <li class="tag-item">MELANCHOLIC</li>
@@ -83,7 +91,7 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <button class="button button-control" onclick="changeBanner()">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -173,28 +181,36 @@
 
         <footer theme-color="black">
             <div>
-                <h5 class="footer-text">Desenvolvido por var L. A. Souza | V6.1</h5>
-                <h6 class="footer-text">Janeiro 2021 - Stream Lyrics</br>Todos os direitos reservados</h6>
+                <h5 class="footer-text">Developed by var L. A. Souza | V6.2</h5>
+                <h6 class="footer-text">March 2021 - Stream Lyrics</br>All rights reserved</h6>
             </div>
             <div>
                 <details>
                     <summary>Images by Pexels</summary>
                     <ul>
-                        <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@earano?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Emiliano Arano</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+                        <br>•> Photo of <strong><a href="https://www.pexels.com/pt-br/@earano?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Emiliano Arano</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
 
-                        <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@maris-rhamdani-714975?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Maris Rhamdani</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+                        <br>•> Photo of <strong><a href="https://www.pexels.com/pt-br/@maris-rhamdani-714975?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Maris Rhamdani</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
 
-                        <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@snapwire?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Snapwire</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+                        <br>•> Photo of <strong><a href="https://www.pexels.com/pt-br/@snapwire?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Snapwire</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
 
-                        <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@eberhardgross?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">eberhard grossgasteiger</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+                        <br>•> Photo of <strong><a href="https://www.pexels.com/pt-br/@eberhardgross?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">eberhard grossgasteiger</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
 
-                        <br>•> Foto de <strong><a href="https://www.pexels.com/pt-br/@chriskane?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Chris Kane</a></strong> no <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+                        <br>•> Photo of <strong><a href="https://www.pexels.com/pt-br/@chriskane?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Chris Kane</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
                     </ul>
                 </details>
             </div>
         </footer>
 
+        <div id="cookies-box">
+            <p id="cookies-msg">This website uses cookies to bring for you the best experience!</p>
+            <button id="cookies-btn" onclick="acceptCookies()">Allow!</button>
+        </div>
+
         <script src="https://kit.fontawesome.com/2a81453bb5.js" crossorigin="anonymous"></script>
-        <script src="js/index.js" type="module" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+        <script src="home-scripts/index.js" type="module" crossorigin="anonymous"></script>
     </body>
 </html>

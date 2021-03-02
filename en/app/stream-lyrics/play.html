@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/play.css">
+
+    <link rel="stylesheet" href="Components/Navbar/navbar.css">
+    <link rel="stylesheet" href="Components/Carousel/carousel.css">
+    <link rel="stylesheet" href="Components/Footer/footer.css">
+    <link rel="stylesheet" href="Components/Cookies/cookies.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers|Montserrat:wght@900&amp;display=swap">
+
+    <title>Stream Lyrics | PLAY</title>
+    <link rel="shortcut icon" href="img/low-size/sl-logo.png" type="image/x-icon">
+
+    <meta property="og:type" content="song">
+    <meta property="og:title" content="Stream Lyrics | PLAY">
+    <meta property="og:description" content="Songs in Japanese">
+    <meta property="og:image" content="https://varlasouza.github.io/en/app/stream-lyrics/img/banner01.jpg">
+    <meta property="og:url" content="https://varlasouza.github.io/en/app/stream-lyrics/play">
+    <meta property="og:site_name" content="Stream Lyrics">
+    <meta name="description" content="Songs in Japanese">
+    <meta name="keywords" content="musics, musiclyrics, sing">
+
+    <meta name="theme-color" content="#151c24">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#151c24">
+    <meta name="msapplication-navbutton-color" content="#151c24">
+</head>
+<body>
+    <nav class="navbar" theme-color="black">
+        <div class="logo">
+            <a href="#" class="link"><img class="logo-img" src="img/low-size/sl-logo.png"></a>
+
+            <div class="searchbox">
+                <input type="text" class="search-text" placeholder="Search here">
+                <a href="#" class="search-btn">
+                    <img src="https://img.icons8.com/fluent-systems-filled/24/000000/search.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <ul class="nav-tags">
+                <li class="item">
+                    <a href="#" class="link">POP</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">MPB</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">J-POP</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">ORCHESTRA</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">ANIME</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="player-container">
+        <div id="player"></div>
+
+        <div id="lyrics">
+            <div class="lyrics-firstsection"><h3 id="lyrics-firstline"></h3></div>
+            <div class="lyrics-secondsection"><h4 id="lyrics-secondline"></h4></div>
+            <div class="lyrics-thirdsection"><h5 id="lyrics-thirdline"></h5></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div>
+            <h6 id="about-title">Stream Lyrics</h6>
+            <span id="views-container"><p id="lrc-views">0 views</p></span>
+        </div>
+        <p id="about-singer">Artist(s):</p>
+        <p id="about-album">Album:</p>
+        <p id="about-author">Author(s):</p>
+        <p id="about-by">Sincronized by:</p>
+    </section>
+
+    <div class="carousel" theme-color="light">
+        <h2 class="title">Listen more:</h2>
+
+        <div class="container">
+            <button class="bt-control" onclick="scrollMusic(0, 'left')">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="carousel-items">
+                <div class="carousel-item">
+                    <a class="link" href="@link">
+                        <img class="item-img" orientation="landscape" src="img/default.png" alt="">
+
+                        <div class="item-details">
+                            <h3 class="item-title">@title</h3>
+                            <p class="subtitle">@subtitle</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <button class="bt-control" onclick="scrollMusic(0, 'right')">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer theme-color="black">
+        <div>
+            <h5 class="footer-text">Developed by var L. A. Souza | V6.2</h5>
+            <h6 class="footer-text">March 2021 - Stream Lyrics</br>All rights reserved</h6>
+        </div>
+        <div>
+            <details>
+                <summary>Stream Lyrics</summary>
+
+                <ul>
+                    <li>•> <a href="https://varlasouza.github.io/en/app/stream-lyrics">Stream Lyrics | HOME</a></li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Images by Pexels</summary>
+
+                <ul>
+                    <br>•> Photo by <strong><a href="https://www.pexels.com/pt-br/@earano?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Emiliano Arano</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+
+                    <br>•> Photo by <strong><a href="https://www.pexels.com/pt-br/@maris-rhamdani-714975?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Maris Rhamdani</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+
+                    <br>•> Photo by <strong><a href="https://www.pexels.com/pt-br/@snapwire?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Snapwire</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+
+                    <br>•> Photo by <strong><a href="https://www.pexels.com/pt-br/@eberhardgross?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">eberhard grossgasteiger</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+
+                    <br>•> Photo by <strong><a href="https://www.pexels.com/pt-br/@chriskane?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Chris Kane</a></strong> on <strong><a href="https://www.pexels.com/pt-br/foto/foto-de-close-up-de-agua-1350197/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong></br></li>
+                </ul>
+            </details>
+        </div>
+    </footer>
+
+    <div id="cookies-box">
+        <p id="cookies-msg">This website uses cookies to bring for you the best experience!</p>
+        <button id="cookies-btn" onclick="acceptCookies()">Allow!</button>
+    </div>
+
+    <script src="https://kit.fontawesome.com/2a81453bb5.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+    <script src="play-scripts/index.js" type="module" crossorigin="anonymous"></script>
+    <script src="play-scripts/yt-player.js" crossorigin="anonymous"></script>
+</body>
+</html>

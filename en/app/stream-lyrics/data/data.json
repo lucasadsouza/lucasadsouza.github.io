@@ -1,0 +1,154 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "query": "9ae7ue4p",
+      "title": "Apesar de Querer",
+      "singer": "Rodrigo Alarcon",
+      "album": "Rodrigo Alarcon no Estúdio Showlivre",
+      "author": "Rodrigo Alarcon",
+      "by": "varlasouza",
+      "genre": [
+        "mpb",
+        "mpb pop",
+        "lively",
+        "portuguese"
+      ],
+      "video_id": "L59QQeTZuP4",
+      "banner": "img/banner00.jpg",
+      "low_banner": "img/low-size/banner00.jpg",
+      "banner_bottom_position": true
+    },
+    {
+      "id": 1,
+      "query": "oi8p7lrs",
+      "title": "April Showers",
+      "singer": "Aimer",
+      "album": "Penny Rain",
+      "author": "AlbatoLuce / Aimerrhythm",
+      "by": "varlasouza",
+      "genre": [
+        "j-pop",
+        "melancholic",
+        "japanese",
+        "sad"
+      ],
+      "video_id": "ERGRRigvX6Q",
+      "banner": "img/banner01.jpg",
+      "low_banner": "img/low-size/banner01.jpg",
+      "banner_bottom_position": false
+    },
+    {
+      "id": 2,
+      "query": "ixh1p2on",
+      "title": "Phoenix",
+      "singer": "Ft. Cailin Russo and Chrissy Costanza",
+      "album": "League of Legends",
+      "author": "Stevie Aiello / Alex Seaver / Riot Games",
+      "by": "varlasouza",
+      "genre": [
+        "pop",
+        "league of legends",
+        "hope",
+        "english"
+      ],
+      "video_id": "i1IKnWDecwA",
+      "banner": "img/banner02.jpg",
+      "low_banner": "img/low-size/banner02.jpg",
+      "banner_bottom_position": false
+    },
+    {
+      "id": 3,
+      "query": "r7aatnmu",
+      "title": "Kamado Tanjiro no Uta",
+      "singer": "Ft. Nami Nakagawa",
+      "album": "Kimetsu No Yaiba",
+      "author": "Go Shiina",
+      "by": "varlasouza",
+      "genre": [
+        "orchestra",
+        "anime",
+        "rise",
+        "japanese"
+      ],
+      "video_id": "Y7YwcHbvysM",
+      "banner": "img/banner03.jpg",
+      "low_banner": "img/low-size/banner03.jpg",
+      "banner_bottom_position": false
+    },
+    {
+      "id": 4,
+      "query": "vaokeer2",
+      "title": "Take Over",
+      "singer": "Jeremy McKinnon, MAX, Henry",
+      "album": "League of Legends",
+      "author": "Alex Seaver of Mako, Cal Scruby, Riot Music Team",
+      "by": "varlasouza",
+      "genre": [
+        "pop",
+        "league of legends",
+        "energetic",
+        "english"
+      ],
+      "video_id": "KbNL9ZyB49c",
+      "banner": "img/banner04.jpg",
+      "low_banner": "img/low-size/banner04.jpg",
+      "banner_bottom_position": false
+    },
+    {
+      "id": 5,
+      "query": "1nwaitmk",
+      "title": "Kimi to Iu Shinwa",
+      "singer": "Jun Maeda x Nagi Yanagi",
+      "album": "Kamisama ni Natta Hi",
+      "author": "",
+      "by": "Lucas Camelo",
+      "genre": [
+        "pop",
+        "energetic",
+        "japanese"
+      ],
+      "video_id": "eZUiCH5DANU",
+      "banner": "none",
+      "low_banner": "none",
+      "banner_bottom_position": false
+    },
+    {
+      "id": 6,
+      "query": "1igukofa",
+      "title": "Fukashigi no Carte",
+      "singer": "Asami Seto, Nao Touyama, Atsumi Tanezaki, Maaya Uchida, Yurika Kubo and Inori Minase",
+      "album": "Fukashigi no Carte",
+      "author": "",
+      "by": "varlasouza",
+      "genre": [
+        "pop",
+        "energetic",
+        "japanese"
+      ],
+      "video_id": "K1PCl5D-IpU",
+      "banner": "none",
+      "low_banner": "none",
+      "banner_bottom_position": false
+    },
+    {
+      "id": 7,
+      "query": "rnraicee",
+      "title": "One More Time, One More Chance",
+      "singer": "Masayoshi Yamazaki",
+      "album": "",
+      "author": "",
+      "by": "Lucas Camelo",
+      "genre": [
+        "melancholic",
+        "sad",
+        "love",
+        "japanese"
+      ],
+      "video_id": "BqFftJDXii0",
+      "banner": "none",
+      "low_banner": "none",
+      "banner_bottom_position": false
+    }
+  ]
+}
