@@ -15,7 +15,8 @@ async function onYouTubeIframeAPIReady () {
                 playerVars: {
                     rel: 0,
                     showinfo: 0,
-                    fs: 0
+                    fs: 0,
+                    origin: 'https://varlasouza.github.io'
                 },
 
                 events: {

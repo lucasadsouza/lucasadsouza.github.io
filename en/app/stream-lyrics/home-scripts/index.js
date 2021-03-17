@@ -38,9 +38,9 @@ firebase.initializeApp(firebaseConfig);
         japaneseCarousel.scroll(element, direction);
     }
 
-    window.changeBanner = (change) => bannerCounter = banner(bannerCounter, data, change);
+    window.changeBanner = (change) => banner(bannerCounter, data, change);
 
-    window.listenButton = () => listenNow(data);
+    window.listenButton = () => listenNow(data, url);
 
     Cookies.show();
 

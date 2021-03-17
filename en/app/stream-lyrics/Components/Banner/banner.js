@@ -8,7 +8,7 @@ export function banner (bannerCounter, data, change="plus") {
 
     if (change === "plus") {
         bannerCounter++;
-    
+
         if (bannerCounter === 3) {
             bannerCounter = 0;
         }
@@ -46,6 +46,6 @@ export function banner (bannerCounter, data, change="plus") {
     return bannerCounter;
 }
 
-export function listenNow (data) {
-    window.location.href = `https://varlasouza.github.io/en/app/stream-lyrics/play?lrc=${data[bannerCounter].id}&type=alphabet&id=${data[bannerCounter].video_id}`;
+export function listenNow (data, url) {
+    window.location.href = `${url}?id=${data[bannerCounter].query}`;
 }
