@@ -16,6 +16,7 @@ async function onYouTubeIframeAPIReady () {
                     rel: 0,
                     showinfo: 0,
                     fs: 0,
+                    enablejsapi: 1,
                     origin: 'https://varlasouza.github.io'
                 },
 

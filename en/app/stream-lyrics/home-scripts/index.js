@@ -1,8 +1,9 @@
 import { Service } from '../Modules/services.js';
-import { banner, listenNow } from '../Components/Banner/banner.js';
+import { Banner } from '../Components/Banner/banner.js';
 import { Carousel } from '../Components/Carousel/carousel.js';
 import { Cookies } from '../Components/Cookies/cookies.js';
 import { firebaseConfig } from '../Modules/firebase-config.js';
+import { Search } from '../Modules/search.js';
 
 
 const dataUrl = 'https://varlasouza.github.io/en/app/stream-lyrics/data/data.json';
@@ -30,6 +31,9 @@ firebase.initializeApp(firebaseConfig);
     popCarousel.create('pop');
     japaneseCarousel.create('japanese');
 
+    let banner = new Banner(data, url);
+    let search = new Search(data, url);
+
     data[1].views += 10;
 
     window.scrollMusic = (element, direction) => {
@@ -38,16 +42,19 @@ firebase.initializeApp(firebaseConfig);
         japaneseCarousel.scroll(element, direction);
     }
 
-    window.changeBanner = (change) => banner(bannerCounter, data, change);
+    window.changeBanner = (change) => banner.slideShow(change);
 
-    window.listenButton = () => listenNow(data, url);
+    window.listenButton = () => banner.listenButton();
 
     Cookies.show();
+    search.find();
 
     window.acceptCookies = () => {
         Cookies.accept();
         Cookies.show();
     }
 
-    setInterval(() => bannerCounter = banner(bannerCounter, data), 10000);
+    window.selectSearch = (query) => search.select(query);
+
+    setInterval(() => banner.slideShow(), 10000);
 }) ();
