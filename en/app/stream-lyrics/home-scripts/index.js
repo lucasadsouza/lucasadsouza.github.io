@@ -9,7 +9,6 @@ import { Search } from '../Modules/search.js';
 const dataUrl = 'https://varlasouza.github.io/en/app/stream-lyrics/data/data.json';
 
 const url = 'https://varlasouza.github.io/en/app/stream-lyrics/play.html';
-let bannerCounter = 0;
 
 firebase.initializeApp(firebaseConfig);
 

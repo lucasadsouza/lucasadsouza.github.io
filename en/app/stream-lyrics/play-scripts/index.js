@@ -5,6 +5,7 @@ import { Service } from '../Modules/services.js';
 import { Cookies } from '../Components/Cookies/cookies.js';
 import { Carousel } from '../Components/Carousel/carousel.js';
 import { firebaseConfig } from '../Modules/firebase-config.js';
+import { Search } from '../Modules/search.js';
 
 
 const dataUrl = 'https://varlasouza.github.io/en/app/stream-lyrics/data/data.json';
@@ -48,6 +49,9 @@ firebase.initializeApp(firebaseConfig);
     let mostPopCarousel = new Carousel(data, 0, url, lyric.query);
     mostPopCarousel.create();
 
+    let search = new Search(data, url);
+    search.find();
+
     window.scrollMusic = (element, direction) => mostPopCarousel.scroll(element, direction);
 
     window.acceptCookies = () => {
@@ -67,6 +71,8 @@ firebase.initializeApp(firebaseConfig);
         }, 500);
         event.target.playVideo();
     }
+
+    window.selectSearch = (query) => search.select(query);
 
     firebase.database().ref().child(`views/${lyric.query}/views`).on('value', (snapshot) => {
         dataViews = snapshot.val();
