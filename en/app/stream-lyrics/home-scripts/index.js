@@ -6,9 +6,9 @@ import { firebaseConfig } from '../Modules/firebase-config.js';
 import { Search } from '../Modules/search.js';
 
 
-const dataUrl = 'https://varlasouza.github.io/en/app/stream-lyrics/data/data.json';
+const dataUrl = './data/data.json';
 
-const url = 'https://varlasouza.github.io/en/app/stream-lyrics/play.html';
+const url = './play.html';
 
 firebase.initializeApp(firebaseConfig);
 
